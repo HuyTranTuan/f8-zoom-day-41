@@ -7,7 +7,7 @@ function AppRoutes() {
     return (
         <HashRouter>
             <Routes>
-                <Route path="" element={<MainLayout />}>
+                <Route path="/" element={<MainLayout />}>
                     <Route path="" element={<ProductList />} />
                     <Route path=":slug" element={<ProductDetail />} />
                 </Route>

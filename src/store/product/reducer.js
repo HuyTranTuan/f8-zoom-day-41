@@ -14,8 +14,7 @@ const reducer = (state = initState, action) => {
             }
         case GET_LIST:
             return {
-                ...state,
-                list: action.payload
+                ...state
             }
         case SET_DETAIL:
             return {
@@ -24,8 +23,7 @@ const reducer = (state = initState, action) => {
             }
         case GET_DETAIL:
             return {
-                ...state,
-                detail: action.payload
+                ...state
             }
         default:
             return state

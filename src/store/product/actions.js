@@ -8,11 +8,20 @@ export const setList = (payload) => {
         payload
     }
 }
-export const getList = (payload) => {
-    return {
-        type: GET_LIST,
-        payload
-    }
+export const getList = () => {
+    return async (dispatch) => {
+        dispatch({ type: GET_LIST });
+        dispatch(ui.showLoading());
+
+        try {
+            const response = await http.get(`/products`);
+            dispatch(setList(response.data.items));
+        } catch (error) {
+            throw new Error(`Error getList: ${error}`)
+        } finally {
+            dispatch(ui.hideLoading());
+        }
+    };
 }
 export function getDetail(slug) {
     return async (dispatch) => {
@@ -23,7 +32,7 @@ export function getDetail(slug) {
             const response = await http.get(`/products/${slug}`);
             dispatch(setDetail(response.data));
         } catch (error) {
-            console.error('❌ Error getDetail', error);
+            throw new Error(`Error getDetail: ${error}`)
         } finally {
             dispatch(ui.hideLoading());
         }
