@@ -85,4 +85,4 @@ const store = createStore(
 [redux-logger v3] import createLogger from 'redux-logger'
 [redux-logger v3] to
 [redux-logger v3] import { createLogger } from 'redux-logger'
-`)};f.defaults=mt,f.createLogger=Mt,f.logger=T,f.default=T,Object.defineProperty(f,"__esModule",{value:!0})})})(hu,hu.exports)),hu.exports}var bS=vS();const SS=Tm(bS),ES=dS({products:_v,ui:cb}),xy=oS(ES,mS(pS,SS));window.store=xy;Fg.createRoot(document.getElementById("root")).render(k.jsx(Av,{store:xy,children:k.jsx(iS,{})}));
+`)};f.defaults=mt,f.createLogger=Mt,f.logger=T,f.default=T,Object.defineProperty(f,"__esModule",{value:!0})})})(hu,hu.exports)),hu.exports}var bS=vS();const SS=Tm(bS),ES=dS({products:_v,ui:cb}),xy=oS(ES,mS(pS,SS));window.store=xy;Fg.createRoot(document.getElementById("root")).render(k.jsx(B.StrictMode,{children:k.jsx(Av,{store:xy,children:k.jsx(iS,{})})}));
